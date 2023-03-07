@@ -26,4 +26,4 @@ jobs:
           context: .
           file: Dockerfile.dev
           push: true
-          tags: crudeboy/docker-frontend:1
+          tags: jazzwill/docker-frontend:1
