@@ -58,5 +58,5 @@ jobs:
           application_name: docker-react
           environment_name: Dockerreact-env
           version_label: "docker-app-${{ steps.format-time.outputs.replaced }}"
-          region: us-west-2
+          region: us-east-1
           deployment_package: deploy.zip
