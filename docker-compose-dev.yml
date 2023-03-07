@@ -1,0 +1,21 @@
+version: '3'
+services:
+  web-app:
+    restart: on-failure
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000" #machine to the docker port
+    volumes:
+      - /app/node_modules # we use volumes in this case to allow the container to refresh on changes made
+      - .:/app
+  tests: 
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /app/node_modules # we use volumes in this case to allow the container to refresh on changes made
+      - .:/app
+    command: ["npm", "run", "test"]
+
