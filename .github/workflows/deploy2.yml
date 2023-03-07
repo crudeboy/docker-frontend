@@ -22,9 +22,9 @@ jobs:
       
       - run: docker run -e CI=true jazzwill/docker-frontend:1 npm test
 
-      - run: docker build -t jazzwill/multi-nginx-10-14 ./nginx
+      # - run: docker build -t jazzwill/multi-nginx-10-14 ./nginx
 
-      - run: docker push jazzwill/multi-nginx-10-14
+      # - run: docker push jazzwill/multi-nginx-10-14
 
       - name: Build and push
         uses: docker/build-push-action@v2
